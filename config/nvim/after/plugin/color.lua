@@ -28,6 +28,9 @@ function SetupColorScheme()
         bg = "none"
     })
     ]]--
+    hl("VertSplit", {
+        bg = "none"
+    })
 
     hl("ColorColumn", {
         bg = "#664c45"
