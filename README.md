@@ -11,3 +11,9 @@
 ### Neovim
 
 * Use [packer.nvim](https://github.com/wbthomason/packer.nvim) to manage plugins
+
+**Language servers**
+
+ESLint: `npm i -g vscode-langservers-extracted`
+Go: `go install golang.org/x/tools/gopls@latest`
+TypeScript: `npm install -g typescript typescript-language-server`
