@@ -2,6 +2,10 @@ local nvim_lsp = require("lspconfig")
 
 local nnoremap = require("ch3rr1.keymap").nnoremap
 
+-- Not sure what this does yet
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippedSupport = true
+
 local function config(_config)
     return vim.tbl_deep_extend("force", {
         on_attach = function()
