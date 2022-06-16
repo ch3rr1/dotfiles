@@ -44,3 +44,5 @@ vim.opt.shortmess:append("c")
 
 -- vim.opt.clipboard = "unnamedplus"
 -- vim.opt.completeopt = "menu,menuone,noselect"
+
+vim.g.mapleader = " "
