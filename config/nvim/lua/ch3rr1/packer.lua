@@ -17,6 +17,8 @@ return require("packer").startup(function()
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
 
+    use("neovim/nvim-lspconfig")
+
     use("TimUntersberger/neogit", {
         requires = "nvim-lua/plenary.nvim"
     })
