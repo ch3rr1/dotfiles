@@ -31,6 +31,19 @@ function SetupColorScheme()
     hl("VertSplit", {
         bg = "none"
     })
+    hl("LspDiagnosticsSignError", {
+        bg = "none",
+        fg = "#ffffff"
+    })
+    hl("LspDiagnosticsSignWarning", {
+        bg = "none"
+    })
+    hl("LspDiagnosticsSignHint", {
+        bg = "none"
+    })
+    hl("LspDiagnosticsSignInformation", {
+        bg = "none"
+    })
 
     hl("ColorColumn", {
         bg = "#664c45"
