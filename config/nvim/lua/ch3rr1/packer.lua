@@ -4,5 +4,7 @@ return require("packer").startup(function()
 
     use("nvim-lua/plenary.nvim")
 
+    use("nvim-telescope/telescope.nvim")
+
     use("mbbill/undotree")
 end)
