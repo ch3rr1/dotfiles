@@ -1,8 +1,8 @@
 vim.g.ch3rr1_colorscheme = "gruvbox"
 
 function SetupColorScheme()
-    -- vim.g.gruvbox_contrast_dark = "hard"
-    -- vim.g.gruvbox_invert_selection = "0"
+    vim.g.gruvbox_contrast_dark = "hard"
+    vim.g.gruvbox_invert_selection = false
     vim.opt.background = "dark"
 
     vim.cmd("colorscheme " .. vim.g.ch3rr1_colorscheme)
