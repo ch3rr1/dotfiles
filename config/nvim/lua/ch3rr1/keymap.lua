@@ -8,6 +8,14 @@ end
 
 local nnoremap = M.nnoremap
 
+nnoremap("<leader>h", ":wincmd h<CR>")
+nnoremap("<leader>j", ":wincmd j<CR>")
+nnoremap("<leader>k", ":wincmd k<CR>")
+nnoremap("<leader>l", ":wincmd l<CR>")
+
+nnoremap("<leader>sv", ":wincmd v<CR>")
+nnoremap("<leader>sh", ":wincmd s<CR>")
+
 nnoremap("<leader>pv", ":Ex<CR>")
 
 nnoremap("<leader>u", ":UndotreeToggle<CR>")
