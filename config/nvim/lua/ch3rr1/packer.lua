@@ -17,6 +17,10 @@ return require("packer").startup(function()
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
 
+    use("TimUntersberger/neogit", {
+        requires = "nvim-lua/plenary.nvim"
+    })
+
     use("numToStr/Comment.nvim")
 
     use("mbbill/undotree")
