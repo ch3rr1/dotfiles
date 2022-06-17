@@ -27,11 +27,11 @@ function SetupColorScheme()
     hl("StatusLine", {
         bg = "none"
     })
-    ]]--
+    ]]
     hl("VertSplit", {
         bg = "none"
     })
-    hl("LspDiagnosticsSignError", {
+    --[[ hl("LspDiagnosticsSignError", {
         bg = "none",
         fg = "#ffffff"
     })
@@ -43,7 +43,7 @@ function SetupColorScheme()
     })
     hl("LspDiagnosticsSignInformation", {
         bg = "none"
-    })
+    }) ]]
 
     hl("ColorColumn", {
         bg = "#664c45"
