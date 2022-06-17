@@ -17,6 +17,8 @@ end
 
 nvim_lsp.eslint.setup(config())
 
+nvim_lsp.flow.setup(config())
+
 nvim_lsp.gopls.setup(config())
 
 local sumneko_root_path = os.getenv("HOME") .. "/Sources/lua-language-server"
