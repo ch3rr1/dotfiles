@@ -1,4 +1,5 @@
 local nvim_lsp = require("lspconfig")
+local util = require("lspconfig/util")
 
 local nnoremap = require("ch3rr1.keymap").nnoremap
 
@@ -17,7 +18,9 @@ end
 
 nvim_lsp.eslint.setup(config())
 
-nvim_lsp.flow.setup(config())
+nvim_lsp.flow.setup(config({
+    root_dir = util.root_pattern(".flowconfig")
+}))
 
 nvim_lsp.gopls.setup(config())
 
@@ -44,4 +47,6 @@ nvim_lsp.sumneko_lua.setup(config({
     }
 }))
 
-nvim_lsp.tsserver.setup(config())
+nvim_lsp.tsserver.setup(config({
+    root_dir = util.root_pattern("tsconfig.json")
+}))
