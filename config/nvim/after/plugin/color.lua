@@ -2,13 +2,17 @@ vim.g.ch3rr1_colorscheme = "gruvbox"
 
 function SetupColorScheme()
     vim.g.gruvbox_contrast_dark = "hard"
+    vim.g.gruvbox_transparent_bg = 1
     vim.g.gruvbox_invert_selection = false
+    -- vim.g.gruvbox_sign_column = "bg0"
+    -- vim.g.tokyonight_transparent = true
+
     vim.opt.background = "dark"
 
     vim.cmd("colorscheme " .. vim.g.ch3rr1_colorscheme)
 
-    local hl = function(name, opts)
-        vim.api.nvim_set_hl(0, name, opts)
+    local hl = function(group, opts)
+        vim.api.nvim_set_hl(0, group, opts)
     end
 
     hl("Normal", {
@@ -18,6 +22,7 @@ function SetupColorScheme()
         bg = "none"
     })
     hl("SignColumn", {
+        ctermbg = "none",
         bg = "none"
     })
     hl("CursorLineNr", {
