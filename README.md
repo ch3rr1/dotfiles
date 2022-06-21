@@ -5,6 +5,7 @@
 ## Includes
 
 * Full lua neovim config
+* tmux configuration
 
 ## Notes
 
