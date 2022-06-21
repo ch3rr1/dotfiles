@@ -4,6 +4,8 @@ return require("packer").startup(function(use)
 
     use("ellisonleao/gruvbox.nvim")
     use("folke/tokyonight.nvim")
+    use("navarasu/onedark.nvim")
+    use("rebelot/kanagawa.nvim")
 
     use("nvim-lualine/lualine.nvim", {
         requires = {"kyazdani42/nvim-web-devicons", opt = true}
