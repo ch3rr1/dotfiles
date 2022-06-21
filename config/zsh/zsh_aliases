@@ -1,0 +1,14 @@
+alias c="clear"
+
+alias ls='lsd'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -al'
+alias lt='ls --tree'
+
+alias gs='git status'
+alias gl='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
+
+alias k=kubectl
+alias kns=kubens
+alias ktx=kubectx
