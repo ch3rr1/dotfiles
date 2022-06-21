@@ -5,6 +5,7 @@ function SetupColorScheme()
     vim.g.gruvbox_transparent_bg = 1
     vim.g.gruvbox_invert_selection = false
     -- vim.g.gruvbox_sign_column = "bg0"
+
     -- vim.g.tokyonight_transparent = true
 
     vim.opt.background = "dark"
@@ -28,14 +29,15 @@ function SetupColorScheme()
     hl("CursorLineNr", {
         bg = "none"
     })
+    hl("VertSplit", {
+        bg = "none"
+    })
     --[[
     hl("StatusLine", {
         bg = "none"
     })
     ]]
-    hl("VertSplit", {
-        bg = "none"
-    })
+
     --[[ hl("LspDiagnosticsSignError", {
         bg = "none",
         fg = "#ffffff"
@@ -50,12 +52,12 @@ function SetupColorScheme()
         bg = "none"
     }) ]]
 
-    hl("ColorColumn", {
+    --[[ hl("ColorColumn", {
         bg = "#664c45"
     })
     hl("LineNr", {
         fg = "#fabd2f"
-    })
+    }) ]]
 end
 
 SetupColorScheme()
