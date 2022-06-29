@@ -8,6 +8,7 @@
 * tmux configuration
 * zsh aliases
 * i3 window manager config
+* lsd config
 
 ## Notes
 
