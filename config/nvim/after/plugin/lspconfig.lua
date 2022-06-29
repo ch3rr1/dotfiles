@@ -11,7 +11,12 @@ local function config(_config)
     return vim.tbl_deep_extend("force", {
         capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
         on_attach = function()
-            nnoremap("K", ":lua vim.lsp.buf.hover()<CR>")
+            nnoremap("K", function() vim.lsp.buf.hover() end)
+            nnoremap("gd", function() vim.lsp.buf.definition() end)
+            nnoremap("<leader>vca", function() vim.lsp.buf.code_action() end)
+            nnoremap("<leader>vrr", function() vim.lsp.buf.references() end)
+            nnoremap("<leader>vrn", function() vim.lsp.buf.rename() end)
+            nnoremap("<C-h>", function() vim.lsp.buf.signature_help() end)
         end
     }, _config or {})
 end
