@@ -21,4 +21,5 @@
 * Flow: [flow](https://flow.org/en/docs/install/)
 * Go: `go install golang.org/x/tools/gopls@latest`
 * Lua: [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua)
+* Python: [jedi-language-server](https://github.com/pappasam/jedi-language-server)
 * TypeScript: `npm install -g typescript typescript-language-server`

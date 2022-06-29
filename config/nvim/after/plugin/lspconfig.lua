@@ -29,6 +29,8 @@ nvim_lsp.flow.setup(config({
 
 nvim_lsp.gopls.setup(config())
 
+nvim_lsp.jedi_language_server.setup(config())
+
 local sumneko_root_path = os.getenv("HOME") .. "/Sources/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 nvim_lsp.sumneko_lua.setup(config({
