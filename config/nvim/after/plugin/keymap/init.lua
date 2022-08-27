@@ -18,6 +18,13 @@ nnoremap("<leader>sh", ":wincmd s<CR>")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
+xnoremap("<leader>p", "\"_dP")
+
+-- Shortcut for copying to system clipboard
+nnoremap("<leader>y", "\"+y")
+vnoremap("<leader>y", "\"+y")
+nmap("<leader>Y", "\"+Y")
+
 vnoremap("J", ":m '>+1<CR>gv=gv")
 vnoremap("K", ":m '<-2<CR>gv=gv")
 
