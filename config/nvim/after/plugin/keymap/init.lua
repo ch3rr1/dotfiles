@@ -15,6 +15,12 @@ nnoremap("<leader>l", ":wincmd l<CR>")
 nnoremap("<leader>sv", ":wincmd v<CR>")
 nnoremap("<leader>sh", ":wincmd s<CR>")
 
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
+vnoremap("J", ":m '>+1<CR>gv=gv")
+vnoremap("K", ":m '<-2<CR>gv=gv")
+
 nnoremap("<leader>pv", ":Ex<CR>")
 
 nnoremap("<leader>u", ":UndotreeToggle<CR>")
