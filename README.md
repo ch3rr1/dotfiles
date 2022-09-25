@@ -10,6 +10,7 @@
 * i3 window manager config
 * lsd config
 * termite config
+* polybar config
 
 ## Notes
 
