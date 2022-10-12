@@ -25,4 +25,5 @@
 * Go: `go install golang.org/x/tools/gopls@latest`
 * Lua: [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua)
 * Python: [jedi-language-server](https://github.com/pappasam/jedi-language-server)
+* Rust: [rust-analyzer](https://rust-analyzer.github.io/manual.html)
 * TypeScript: `npm install -g typescript typescript-language-server`

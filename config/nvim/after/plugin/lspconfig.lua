@@ -57,3 +57,5 @@ nvim_lsp.sumneko_lua.setup(config({
 nvim_lsp.tsserver.setup(config({
     root_dir = util.root_pattern("tsconfig.json")
 }))
+
+nvim_lsp.rust_analyzer.setup(config())
