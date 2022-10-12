@@ -4,16 +4,16 @@ local cmp = require("cmp")
 lspkind.init()
 
 cmp.setup({
-    mapping = {
-        ["<C-p>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-n>"] = cmp.mapping.scroll_docs(4),
+    mapping = cmp.mapping.preset.insert({
+        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),
         ["<C-e>"] = cmp.mapping.close(),
         ["<C-y>"] = cmp.mapping.confirm({
             behaviour = cmp.ConfirmBehavior.Insert,
             select = true
         }),
-        ["<C-space>"] = cmp.mapping.complete()
-    },
+        ["<C-Space>"] = cmp.mapping.complete()
+    }),
     sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "path" },
