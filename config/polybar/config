@@ -454,7 +454,7 @@ menu-2-1-exec = menu-open-0
 [module/pacman-updates]
 type = custom/script
 exec = checkupdates | wc -l
-interval = 1000
+interval = 100
 label = %output% pkg(s)
 ;format-background = ${colors.gray}
 format-foreground = ${colors.foreground}
