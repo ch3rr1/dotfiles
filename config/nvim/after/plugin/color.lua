@@ -1,4 +1,4 @@
-vim.g.ch3rr1_colorscheme = "catppuccin"
+vim.g.ch3rr1_colorscheme = "gruvbox"
 
 --[[ function SetupColorScheme()
     -- vim.g.gruvbox_contrast_dark = "hard"
@@ -73,6 +73,10 @@ require("gruvbox").setup({
             fg = "#8ec07c"
         }
     }
+})
+
+require("catppuccin").setup({
+	transparent_background = true
 })
 
 vim.opt.background = "dark"
