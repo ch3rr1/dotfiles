@@ -1,4 +1,4 @@
-vim.g.ch3rr1_colorscheme = "gruvbox"
+vim.g.ch3rr1_colorscheme = "catppuccin"
 
 --[[ function SetupColorScheme()
     -- vim.g.gruvbox_contrast_dark = "hard"
