@@ -12,3 +12,6 @@ alias gl='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %C
 alias k=kubectl
 alias kns=kubens
 alias ktx=kubectx
+
+alias reverse-proxy-up='docker compose -f docker-compose.yaml -f docker-compose.graphql.yaml up reverse-proxy'
+alias backend-services-up='docker compose -f docker-compose.graphql.yaml up'
