@@ -59,3 +59,5 @@ nvim_lsp.tsserver.setup(config({
 }))
 
 nvim_lsp.rust_analyzer.setup(config())
+
+require'lspconfig'.vuels.setup(config())
