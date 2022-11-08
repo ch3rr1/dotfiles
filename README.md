@@ -28,3 +28,4 @@
 * Rust: [rust-analyzer](https://rust-analyzer.github.io/manual.html)
 * TypeScript: `npm install -g typescript typescript-language-server`
 * Vue: [vue-language-server](https://github.com/vuejs/vetur/tree/master/server)
+* Volar: [ts-language-server-for-vue](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#volar)

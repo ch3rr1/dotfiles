@@ -31,7 +31,7 @@ nvim_lsp.gopls.setup(config())
 
 nvim_lsp.jedi_language_server.setup(config())
 
-local sumneko_root_path = os.getenv("HOME") .. "/Sources/lua-language-server"
+local sumneko_root_path = os.getenv("HOME") .. "/Developer/Sources/lua-language-server"
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
 nvim_lsp.sumneko_lua.setup(config({
     cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
@@ -60,4 +60,8 @@ nvim_lsp.tsserver.setup(config({
 
 nvim_lsp.rust_analyzer.setup(config())
 
-require'lspconfig'.vuels.setup(config())
+nvim_lsp.vuels.setup(config())
+
+nvim_lsp.volar.setup(config({
+  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+}))
