@@ -35,7 +35,7 @@ focus_follows_mouse no
 # Basic settings
 set $browser firefox
 set $mail thunderbird
-set $term termite
+set $term alacritty
 
 # assign programs to workspaces
 for_window [class="Spotify"] move to workspace $ws10

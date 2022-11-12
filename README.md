@@ -11,6 +11,7 @@
 * lsd config
 * termite config
 * polybar config
+* alacritty config
 
 ## Notes
 
