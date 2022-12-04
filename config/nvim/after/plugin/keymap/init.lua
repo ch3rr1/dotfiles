@@ -18,6 +18,9 @@ nnoremap("<leader>sh", ":wincmd s<CR>")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
+nnoremap("n", "nzzzv")
+nnoremap("N", "Nzzzv")
+
 xnoremap("<leader>p", "\"_dP")
 
 -- Shortcut for copying to system clipboard
