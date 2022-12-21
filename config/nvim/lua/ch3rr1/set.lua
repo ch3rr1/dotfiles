@@ -42,6 +42,9 @@ vim.opt.updatetime = 50
 -- Don't pass message to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
 
+-- Set global status line
+vim.opt.laststatus = 3
+
 -- vim.opt.clipboard = "unnamedplus"
 -- vim.opt.completeopt = "menu,menuone,noselect"
 
