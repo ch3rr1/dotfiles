@@ -21,6 +21,9 @@ nnoremap("<C-u>", "<C-u>zz")
 nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
 
+nnoremap("<C-N>", ":cnext<CR>")
+nnoremap("<C-P>", ":cprev<CR>")
+
 xnoremap("<leader>p", "\"_dP")
 
 -- Shortcut for copying to system clipboard
