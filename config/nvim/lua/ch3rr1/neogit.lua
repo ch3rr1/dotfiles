@@ -1,4 +1,9 @@
-local neogit = require("neogit")
+local ok, neogit = pcall(require, "neogit")
+
+if not ok then
+	return
+end
+
 local nnoremap = require("ch3rr1.keymap").nnoremap
 
 neogit.setup({})

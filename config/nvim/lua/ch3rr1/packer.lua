@@ -7,6 +7,13 @@ return require("packer").startup(function(use)
     use("navarasu/onedark.nvim")
     use("rebelot/kanagawa.nvim")
     use { "catppuccin/nvim", as = "catppuccin" }
+	use({
+		"rose-pine/neovim",
+		as = "rose-pine",
+		config = function()
+			vim.cmd("colorscheme rose-pine")
+		end
+	})
 
     use("nvim-lualine/lualine.nvim", {
         requires = {"kyazdani42/nvim-web-devicons", opt = true}
@@ -21,6 +28,11 @@ return require("packer").startup(function(use)
     use("nvim-lua/plenary.nvim")
     use("nvim-telescope/telescope.nvim")
 
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "make"
+	})
+
     use("neovim/nvim-lspconfig")
     use("onsails/lspkind-nvim")
 
@@ -31,9 +43,9 @@ return require("packer").startup(function(use)
     use("saadparwaiz1/cmp_luasnip")
 	use("L3MON4D3/LuaSnip")
 
-    use("TimUntersberger/neogit", {
-        requires = "nvim-lua/plenary.nvim"
-    })
+    -- use("TimUntersberger/neogit", {
+    --     requires = "nvim-lua/plenary.nvim"
+    -- })
 
 	use("f-person/git-blame.nvim");
 

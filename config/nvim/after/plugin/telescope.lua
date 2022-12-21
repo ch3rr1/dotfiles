@@ -1,6 +1,12 @@
-local actions = require("telescope.actions")
+local ok, telescope = pcall(require, "telescope")
 
-require("telescope").setup({
+if not ok then
+	return
+end
+
+--[[ local actions = require("telescope.actions")
+
+telescope.setup({
     defaults = {
         file_sorter = require("telescope.sorters").get_fzy_sorter,
         prompt_prefix = " > ",
@@ -14,4 +20,7 @@ require("telescope").setup({
             }
         }
     }
-})
+}) ]]
+
+telescope.setup()
+require("telescope").load_extension("fzf")
