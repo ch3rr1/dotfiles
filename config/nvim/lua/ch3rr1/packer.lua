@@ -6,6 +6,7 @@ return require("packer").startup(function(use)
     use("folke/tokyonight.nvim")
     use("navarasu/onedark.nvim")
     use("rebelot/kanagawa.nvim")
+	use("shaunsingh/nord.nvim")
     use { "catppuccin/nvim", as = "catppuccin" }
 	use({
 		"rose-pine/neovim",

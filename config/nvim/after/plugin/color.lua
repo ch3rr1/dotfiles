@@ -43,7 +43,7 @@ end
 
 local function gruvboxSetup()
 	require("gruvbox").setup({
-		contrast = "hard",
+		-- contrast = "hard",
 		overrides = {
 			Normal = {
 				bg = "none"
