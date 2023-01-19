@@ -86,11 +86,11 @@ function SetupColorScheme(color)
 	local setupFunction = colorSchemes[color]
 	if setupFunction then
 		setupFunction()
+		vim.cmd("colorscheme " .. color)
 	else
+		vim.cmd("colorscheme " .. color)
 		defaultSetup()
 	end
-
-	vim.cmd("colorscheme " .. vim.g.ch3rr1_colorscheme)
 end
 
 SetupColorScheme(vim.g.ch3rr1_colorscheme)
