@@ -26,8 +26,8 @@ vim.opt.hlsearch = false
 -- vim.opt.ignorecase = true
 -- vim.opt.smartcast = true
 
-vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "80"
+-- vim.opt.signcolumn = "yes"
+-- vim.opt.colorcolumn = "80"
 -- vim.opt.cursorline = true
 
 -- Give more space for displaying messages.

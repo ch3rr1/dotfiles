@@ -13,9 +13,9 @@ return require("packer").startup(function(use)
 		as = "rose-pine"
 	})
 
-    use("nvim-lualine/lualine.nvim", {
-        requires = {"kyazdani42/nvim-web-devicons", opt = true}
-    })
+    -- use("nvim-lualine/lualine.nvim", {
+    --     requires = {"kyazdani42/nvim-web-devicons", opt = true}
+    -- })
 
     use("nvim-treesitter/nvim-treesitter", {
         run = ":TSUpdate"

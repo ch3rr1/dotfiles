@@ -62,6 +62,6 @@ nvim_lsp.rust_analyzer.setup(config())
 
 nvim_lsp.vuels.setup(config())
 
-nvim_lsp.volar.setup(config({
-  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
-}))
+-- nvim_lsp.volar.setup(config({
+--   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+-- }))
