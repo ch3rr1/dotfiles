@@ -24,7 +24,7 @@
 * ESLint: `npm i -g vscode-langservers-extracted`
 * Flow: [flow](https://flow.org/en/docs/install/)
 * Go: `go install golang.org/x/tools/gopls@latest`
-* Lua: [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua)
+* Lua: [lua-language-server](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls)
 * Python: [jedi-language-server](https://github.com/pappasam/jedi-language-server)
 * Rust: [rust-analyzer](https://rust-analyzer.github.io/manual.html)
 * TypeScript: `npm install -g typescript typescript-language-server`

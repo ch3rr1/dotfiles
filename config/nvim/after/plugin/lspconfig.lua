@@ -31,28 +31,24 @@ nvim_lsp.gopls.setup(config())
 
 nvim_lsp.jedi_language_server.setup(config())
 
-local sumneko_root_path = os.getenv("HOME") .. "/Developer/Sources/lua-language-server"
-local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
-nvim_lsp.sumneko_lua.setup(config({
-    cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
-    settings = {
-        Lua = {
-            runtime = {
-                version = "LuaJIT",
-                path = vim.split(package.path, ";")
-            },
-            diagnostics = {
-                globals = { "vim" }
-            },
-            workspace = {
-                library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true
-                }
-            }
-        }
-    }
-}))
+nvim_lsp.lua_ls.setup(config({
+	settings = {
+		Lua = {
+			runtime = {
+				version = 'LuaJIT',
+			},
+			diagnostics = {
+				globals = {'vim'},
+			},
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			telemetry = {
+				enable = false,
+			}
+		}
+	}
+}));
 
 nvim_lsp.tsserver.setup(config({
     root_dir = util.root_pattern("tsconfig.json")
