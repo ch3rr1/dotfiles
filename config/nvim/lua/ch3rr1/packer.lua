@@ -52,4 +52,6 @@ return require("packer").startup(function(use)
     use("numToStr/Comment.nvim")
 
     use("mbbill/undotree")
+
+	use("github/copilot.vim")
 end)
