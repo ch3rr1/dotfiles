@@ -38,3 +38,4 @@ nnoremap("<leader>pv", ":Ex<CR>")
 
 nnoremap("<leader>u", ":UndotreeToggle<CR>")
 nnoremap("<leader>t", ":TroubleToggle<CR>")
+nnoremap("<leader>b", ":GitBlameToggle<CR>")
