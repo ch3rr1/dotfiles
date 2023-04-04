@@ -37,3 +37,4 @@ vnoremap("K", ":m '<-2<CR>gv=gv")
 nnoremap("<leader>pv", ":Ex<CR>")
 
 nnoremap("<leader>u", ":UndotreeToggle<CR>")
+nnoremap("<leader>t", ":TroubleToggle<CR>")

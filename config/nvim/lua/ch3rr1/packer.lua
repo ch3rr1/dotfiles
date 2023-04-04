@@ -44,6 +44,15 @@ return require("packer").startup(function(use)
     -- use("TimUntersberger/neogit", {
     --     requires = "nvim-lua/plenary.nvim"
     -- })
+	
+	use({
+		"folke/trouble.nvim",
+		config = function()
+			require("trouble").setup {
+				icons = false
+			}
+		end
+	})
 
 	use("tpope/vim-fugitive");
 
