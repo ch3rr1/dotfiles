@@ -21,8 +21,8 @@ nnoremap("<C-u>", "<C-u>zz")
 nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
 
-nnoremap("<C-n>", ":cnext<CR>zz")
-nnoremap("<C-p>", ":cprev<CR>zz")
+nnoremap("<C-j>", ":cnext<CR>zz")
+nnoremap("<C-k>", ":cprev<CR>zz")
 
 -- Paste without yank
 xnoremap("<leader>p", "\"_dP")
