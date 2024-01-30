@@ -1,4 +1,4 @@
-vim.g.ch3rr1_colorscheme = "rose-pine"
+vim.g.ch3rr1_colorscheme = "tokyonight"
 
 local function defaultSetup()
     -- vim.g.gruvbox_contrast_dark = "hard"
@@ -74,6 +74,13 @@ local function gruvboxSetup()
 	})
 end
 
+local function tokyonightSetup()
+	require("tokyonight").setup({
+		style = "night",
+		dim_interactive = false
+	})
+end
+
 local function rosepineSetup()
 	require('rose-pine').setup({
 	--- @usage 'main' | 'moon'
@@ -115,12 +122,12 @@ local function rosepineSetup()
 		ColorColumn = { bg = 'rose' }
 	}
 })
-
 end
 
 local colorSchemes = {
 	["gruvbox"] = gruvboxSetup,
-	["rose-pine"] = rosepineSetup
+	["rose-pine"] = rosepineSetup,
+	["tokyonight"] = tokyonightSetup
 }
 
 function SetupColorScheme(color)
