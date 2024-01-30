@@ -3,11 +3,12 @@ return require("packer").startup(function(use)
     use("wbthomason/packer.nvim")
 
     use("ellisonleao/gruvbox.nvim")
+	use("eddyekofo94/gruvbox-flat.nvim")
     use("folke/tokyonight.nvim")
     use("navarasu/onedark.nvim")
     use("rebelot/kanagawa.nvim")
 	use("shaunsingh/nord.nvim")
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use({ "catppuccin/nvim", as = "catppuccin" })
 	use({
 		"rose-pine/neovim",
 		as = "rose-pine"
