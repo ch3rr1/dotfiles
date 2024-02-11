@@ -61,6 +61,7 @@ nvim_lsp.vuels.setup(config())
 
 nvim_lsp.graphql.setup(config())
 
+nvim_lsp.glslls.setup(config())
 
 -- nvim_lsp.volar.setup(config({
 --   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
