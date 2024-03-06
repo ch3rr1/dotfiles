@@ -1,6 +1,4 @@
-require("ch3rr1.packer")
-require("ch3rr1.set")
-require("ch3rr1.neogit")
+require("ch3rr1.core.options")
 
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
@@ -16,3 +14,4 @@ autocmd("TextYankPost", {
         })
     end
 })
+

@@ -1,12 +1,19 @@
--- vim.opt.encoding = "utf-8"
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.g.have_nerd_font = false
+vim.opt.showmode = false
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.breakindent = true
 
 vim.opt.termguicolors = true
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 vim.opt.errorbells = false
 vim.opt.hidden = true
-vim.opt.number = true
-vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
 vim.opt.wrap = false
 
@@ -18,15 +25,16 @@ vim.opt.smartindent = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+-- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.incsearch = true
 vim.opt.hlsearch = false
--- vim.opt.ignorecase = true
--- vim.opt.smartcast = true
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
--- vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes"
 -- vim.opt.colorcolumn = "80"
 -- vim.opt.cursorline = true
 
@@ -37,7 +45,8 @@ vim.opt.cmdheight = 1
 vim.opt.isfname:append("@-@")
 
 -- Shorter updatetime (default is 4000 ms) leads to less delays.
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
 -- Don't pass message to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
@@ -50,4 +59,8 @@ vim.opt.laststatus = 3
 
 -- vim.opt.winbar = "%f %m"
 
-vim.g.mapleader = " "
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
