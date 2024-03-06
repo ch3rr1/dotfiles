@@ -12,8 +12,10 @@ nnoremap("<leader>j", ":wincmd j<CR>")
 nnoremap("<leader>k", ":wincmd k<CR>")
 nnoremap("<leader>l", ":wincmd l<CR>")
 
-nnoremap("<leader>sv", ":wincmd v<CR>")
-nnoremap("<leader>sh", ":wincmd s<CR>")
+nnoremap("<leader>sv", "<C-w>v")
+nnoremap("<leader>sh", "<C-w>s")
+nnoremap("<leader>se", "<C-w>=")
+nnoremap("<leader>sx", ":close<CR>")
 
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
@@ -23,6 +25,8 @@ nnoremap("N", "Nzzzv")
 
 nnoremap("<C-j>", ":cnext<CR>zz")
 nnoremap("<C-k>", ":cprev<CR>zz")
+
+nnoremap("x", '"_x')
 
 -- Paste without yank
 xnoremap("<leader>p", "\"_dP")
@@ -35,8 +39,10 @@ nmap("<leader>Y", "\"+Y")
 vnoremap("J", ":m '>+1<CR>gv=gv")
 vnoremap("K", ":m '<-2<CR>gv=gv")
 
-nnoremap("<leader>pv", ":Ex<CR>")
+nnoremap("<leader>+", "<C-a>")
+nnoremap("<leader>-", "<C-x>")
 
+nnoremap("<leader>pv", ":Ex<CR>")
 nnoremap("<leader>u", ":UndotreeToggle<CR>")
 nnoremap("<leader>t", ":TroubleToggle<CR>")
 nnoremap("<leader>b", ":GitBlameToggle<CR>")
