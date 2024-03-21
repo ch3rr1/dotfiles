@@ -3,7 +3,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = true
+vim.g.have_nerd_font = false
 
 -- Make line numbers default
 vim.opt.number = true
@@ -58,6 +58,37 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Custom keymaps from old config
+-- vim.opt.encoding = "utf-8"
+vim.opt.termguicolors = true
+vim.opt.guicursor = ''
+vim.opt.errorbells = false
+vim.opt.hidden = true
+vim.opt.wrap = false
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = false
+vim.opt.smartindent = true
+vim.opt.swapfile = false
+-- vim.opt.backup = false
+-- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+vim.opt.incsearch = true
+vim.opt.hlsearch = false
+-- vim.opt.cursorline = true
+-- Give more space for displaying messages.
+vim.opt.cmdheight = 1
+-- Something for better mono repo experience.
+vim.opt.isfname:append '@-@'
+-- Don't pass message to |ins-completion-menu|.
+vim.opt.shortmess:append 'c'
+-- Set global status line
+vim.opt.laststatus = 3
+-- vim.opt.clipboard = "unnamedplus"
+-- vim.opt.completeopt = "menu,menuone,noselect"
+-- vim.opt.winbar = "%f %m"
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -90,9 +121,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
 })
+
+require 'ch3rr1.core.keymap'
