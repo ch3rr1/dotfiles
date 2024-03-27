@@ -109,6 +109,17 @@ return { -- LSP Configuration & Plugins
                     },
                 },
             },
+
+            yamlls = {
+                settings = {
+                    yaml = {
+                        validate = true,
+                        schemas = {
+                            ['https://storage.googleapis.com/br-docs/shadowbroker.v12.json'] = 'shadowbroker.yaml',
+                        },
+                    },
+                },
+            },
         }
 
         -- Ensure the servers and tools above are installed
