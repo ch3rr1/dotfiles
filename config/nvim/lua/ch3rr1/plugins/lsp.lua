@@ -115,6 +115,7 @@ return { -- LSP Configuration & Plugins
                 settings = {
                     yaml = {
                         validate = true,
+                        completion = true,
                         schemas = {
                             ['https://storage.googleapis.com/br-docs/shadowbroker.v12.json'] = 'shadowbroker.yaml',
                         },
