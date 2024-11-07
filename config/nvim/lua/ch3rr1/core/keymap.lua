@@ -1,9 +1,9 @@
 local function map(op, outer_opts)
-  outer_opts = outer_opts or { noremap = true }
-  return function(lhs, rhs, opts)
-    opts = vim.tbl_extend('force', outer_opts, opts or {})
-    vim.keymap.set(op, lhs, rhs, opts)
-  end
+    outer_opts = outer_opts or { noremap = true }
+    return function(lhs, rhs, opts)
+        opts = vim.tbl_extend('force', outer_opts, opts or {})
+        vim.keymap.set(op, lhs, rhs, opts)
+    end
 end
 
 local nmap = map('n', { noremap = false })
@@ -34,6 +34,10 @@ nnoremap('<C-j>', ':cnext<CR>zz')
 nnoremap('<C-k>', ':cprev<CR>zz')
 
 nnoremap('x', '"_x')
+
+-- Delete withoug yank
+nnoremap('<leader>d', '"_d')
+vnoremap('<leader>d', '"_d')
 
 -- Paste without yank
 xnoremap('<leader>p', '"_dP')
