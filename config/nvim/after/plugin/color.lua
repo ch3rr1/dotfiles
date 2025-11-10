@@ -1,4 +1,4 @@
-vim.g.ch3rr1_colorscheme = "rose-pine"
+vim.g.ch3rr1_colorscheme = "gruvbox"
 
 local function defaultSetup()
     -- vim.g.gruvbox_contrast_dark = "hard"
