@@ -130,7 +130,13 @@ return {
         },
     },
 
-    { 'github/copilot.vim' },
+    {
+        'github/copilot.vim',
+        config = function()
+            vim.keymap.set('i', '<C-l>', 'copilot#AcceptLine()', { expr = true, silent = true, replace_keycodes = false })
+            vim.keymap.set('i', '<C-j>', 'copilot#AcceptWord()', { expr = true, silent = true, replace_keycodes = false })
+        end,
+    },
 
     -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
     -- init.lua. If you want these files, they are in the repository, so you can just download them and
