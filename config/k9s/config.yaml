@@ -28,7 +28,7 @@ k9s:
       namespaces: []
       labels: {}
   logger:
-    tail: 2500
+    tail: 5000
     buffer: 10000
     sinceSeconds: -1
     textWrap: false
