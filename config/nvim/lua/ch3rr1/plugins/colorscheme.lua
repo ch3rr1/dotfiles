@@ -17,7 +17,7 @@
 --
 --         local tokyonight = require 'tokyonight'
 --         tokyonight.setup {
---             style = 'night',
+--             style = 'day',
 --             transparent = true,
 --             terminal_colors = true,
 --         }
@@ -25,22 +25,123 @@
 -- }
 
 -- return {
---     'rose-pine/neovim',
---     as = 'rose-pine',
---     config = function()
---         vim.cmd 'colorscheme rose-pine'
+--     'ellisonleao/gruvbox.nvim',
+--     priority = 1000, -- load before all the other start plugins
+--     lazy = false,
+--     opts = {
+--         contrast = 'hard', -- can be "hard", "soft" or empty string
+--         transparent_mode = true,
+--     },
+--     config = function(_, opts)
+--         require('gruvbox').setup(opts)
+--         vim.cmd 'colorscheme gruvbox'
 --     end,
 -- }
 
 return {
-    'navarasu/onedark.nvim',
-    as = 'onedark',
+    'sainnhe/everforest',
+    lazy = false,
+    priority = 1000,
     config = function()
-        vim.cmd 'colorscheme onedark'
-        local onedark = require 'onedark'
-        onedark.setup {
-            style = 'darker', -- or 'deep', 'cool', 'warm'
-            terminal_colors = true,
-        }
+        vim.g.everforest_background = 'medium'
+        vim.cmd.colorscheme 'everforest'
     end,
 }
+
+-- return {
+--     'neanias/everforest-nvim',
+--     version = false,
+--     lazy = false,
+--     priority = 1000, -- make sure to load this before all the other start plugins
+--     -- Optional; default configuration will be used if setup isn't called.
+--     config = function()
+--         require('everforest').setup {
+--             -- Your config here
+--         }
+--         vim.cmd.colorscheme 'everforest'
+--     end,
+-- }
+
+-- return {
+--     'rebelot/kanagawa.nvim',
+--     as = 'kanagawa',
+--     config = function()
+--         local kanagawa = require 'kanagawa'
+--         kanagawa.setup {
+--             theme = 'wave',
+--             background = {
+--                 dark = 'dragon',
+--                 light = 'lotus',
+--             },
+--         }
+--         vim.cmd 'colorscheme kanagawa'
+--     end,
+-- }
+
+-- return {
+--     'rose-pine/neovim',
+--     as = 'rose-pine',
+--     config = function()
+--         local rosepine = require 'rose-pine'
+--         rosepine.setup {
+--             variant = 'auto',
+--             dark_variant = 'moon',
+--             styles = {
+--                 transparency = true,
+--             },
+--         }
+--         vim.cmd 'colorscheme rose-pine'
+--     end,
+-- }
+
+-- return {
+--     'navarasu/onedark.nvim',
+--     as = 'onedark',
+--     priority = 1000,
+--     config = function()
+--         local onedark = require 'onedark'
+--         onedark.setup {
+--             style = 'darker', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+--             term_colors = true,
+--             transparent = true,
+--         }
+--         onedark.load()
+--     end,
+-- }
+
+-- return {
+--     'gbprod/nord.nvim',
+--     as = 'nord',
+--     config = function()
+--         local nord = require 'nord'
+--         nord.setup {
+--             transparent = true,
+--         }
+--         vim.cmd.colorscheme 'nord'
+--         -- Apply transparency to all relevant groups
+--         local function set_transparent_background()
+--             local groups = {
+--                 'Normal',
+--                 'NormalNC',
+--                 'NormalFloat',
+--                 'FloatBorder',
+--                 'TelescopeNormal',
+--                 'TelescopeBorder',
+--                 'LazyNormal',
+--                 'TroubleNormal',
+--                 'Pmenu',
+--             }
+--
+--             for _, group in ipairs(groups) do
+--                 vim.api.nvim_set_hl(0, group, { bg = 'none' })
+--             end
+--         end
+--
+--         vim.api.nvim_create_autocmd('ColorScheme', {
+--             pattern = '*',
+--             callback = set_transparent_background,
+--         })
+--
+--         set_transparent_background()
+--     end,
+-- }
