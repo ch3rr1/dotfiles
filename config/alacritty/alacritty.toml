@@ -11,5 +11,5 @@ bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
 
 [general]
 import = [
-  "~/.config/alacritty/themes/one_dark.toml"
+  "~/.config/alacritty/themes/everforest_dark.toml",
 ]
