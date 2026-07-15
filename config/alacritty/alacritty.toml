@@ -11,5 +11,5 @@ bold_italic = { family = "MesloLGS NF", style = "Bold Italic" }
 
 [general]
 import = [
-    "~/.config/alacritty/themes/tokyonight_night.toml",
+    "~/.config/alacritty/themes/one_dark_deep.toml",
 ]

@@ -1,0 +1,33 @@
+# One Dark Deep (navarasu/onedark.nvim)
+
+[colors.primary]
+background = "#1a212e"  # bg0
+foreground = "#93a4c3"  # fg
+
+[colors.cursor]
+text   = "#1a212e"
+cursor = "#93a4c3"
+
+[colors.selection]
+text       = "CellForeground"
+background = "#283347"  # bg2
+
+[colors.normal]
+black   = "#0c0e15"
+red     = "#f65866"
+green   = "#8bcd5b"
+yellow  = "#efbd5d"
+blue    = "#41a7fc"
+magenta = "#c75ae8"
+cyan    = "#34bfd0"
+white   = "#93a4c3"
+
+[colors.bright]
+black   = "#455574"  # grey
+red     = "#f65866"
+green   = "#8bcd5b"
+yellow  = "#efbd5d"
+blue    = "#41a7fc"
+magenta = "#c75ae8"
+cyan    = "#34bfd0"
+white   = "#6c7d9c"  # light_grey
