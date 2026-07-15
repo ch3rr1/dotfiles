@@ -129,7 +129,6 @@ return {
             },
         },
     },
-
     {
         'github/copilot.vim',
         config = function()
@@ -137,7 +136,15 @@ return {
             vim.keymap.set('i', '<C-j>', 'copilot#AcceptWord()', { expr = true, silent = true, replace_keycodes = false })
         end,
     },
-
+    {
+        'likec4/likec4.nvim',
+        build = 'npm install -g @likec4/lsp',
+        config = function()
+            vim.lsp.config('likec4', {
+                cmd = { 'likec4-lsp', '--stdio' },
+            })
+        end,
+    },
     -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
     -- init.lua. If you want these files, they are in the repository, so you can just download them and
     -- put them in the right spots if you want.
