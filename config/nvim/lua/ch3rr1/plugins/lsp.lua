@@ -58,8 +58,12 @@ return { -- LSP Configuration & Plugins
             end,
         })
 
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
-        capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+        -- Register default capabilities (incl. nvim-cmp) for every server.
+        --  mason-lspconfig v2 no longer accepts `handlers`; servers are enabled
+        --  via `vim.lsp.enable()` and configured through `vim.lsp.config()`.
+        vim.lsp.config('*', {
+            capabilities = require('cmp_nvim_lsp').default_capabilities(),
+        })
 
         -- Enable the following language servers
         --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -129,6 +133,13 @@ return { -- LSP Configuration & Plugins
             },
         }
 
+        -- Register each server's settings. `vim.lsp.config` merges these over the
+        -- defaults shipped by nvim-lspconfig; mason-lspconfig's `automatic_enable`
+        -- then starts every installed server via `vim.lsp.enable()`.
+        for name, config in pairs(servers) do
+            vim.lsp.config(name, config)
+        end
+
         -- Ensure the servers and tools above are installed
         --  To check the current status of installed tools and/or manually install
         --  other tools, you can run
@@ -145,17 +156,7 @@ return { -- LSP Configuration & Plugins
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-        require('mason-lspconfig').setup {
-            handlers = {
-                function(server_name)
-                    local server = servers[server_name] or {}
-                    -- This handles overriding only values explicitly passed
-                    -- by the server configuration above. Useful when disabling
-                    -- certain features of an LSP (for example, turning off formatting for tsserver)
-                    server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-                    require('lspconfig')[server_name].setup(server)
-                end,
-            },
-        }
+        -- automatic_enable = true (default) enables all installed servers.
+        require('mason-lspconfig').setup {}
     end,
 }
