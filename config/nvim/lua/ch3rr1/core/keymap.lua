@@ -54,6 +54,6 @@ nnoremap('<leader>+', '<C-a>')
 nnoremap('<leader>-', '<C-x>')
 
 nnoremap('<leader>pv', ':Ex<CR>')
-nnoremap('<leader>u', ':UndotreeToggle<CR>')
-nnoremap('<leader>t', ':TroubleToggle<CR>')
-nnoremap('<leader>b', ':GitBlameToggle<CR>')
+-- <leader>u (undotree) is defined by the plugin's own `keys` spec
+nnoremap('<leader>t', ':Trouble diagnostics toggle<CR>')
+nnoremap('<leader>b', ':Gitsigns blame_line<CR>')

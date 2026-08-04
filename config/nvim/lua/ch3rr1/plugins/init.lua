@@ -142,7 +142,9 @@ return {
         config = function()
             vim.lsp.config('likec4', {
                 cmd = { 'likec4-lsp', '--stdio' },
+                filetypes = { 'likec4', 'c4' },
             })
+            vim.lsp.enable 'likec4'
         end,
     },
     -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
